@@ -5,11 +5,19 @@ import React from "react";
         name : 'Eric',
         address: 'Hoi dan IT',
         age: 26
+    };
+
+    handleClick(){
+        console.log(">>click me my button")
     }
+
     render(){
         return(
             
-            <div>My name is {this.state.name} I'm from {this.state.address}</div>
+            <div>My name is {this.state.name} I'm from {this.state.address}
+            <button onClick={ this.handleClick}>Cick me</button>
+            </div>
+            
         );
     }
  }
