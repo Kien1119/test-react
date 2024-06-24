@@ -7,15 +7,27 @@ import React from "react";
         age: 26
     };
 
-    handleClick(){
-        console.log(">>click me my button")
+    handleClick (event){
+        // console.log(">>My name is", this.state.name)
+        this.setState({
+            name:'Kien',
+            age:Math.floor((Math.random()*100)+1)
+        });
+
+        // this.setState({
+        //     age:Math.floor((Math.random()*100)+1)
+        // })
+    }
+    handleOnMoverOver(event){
+        // console.log(event.pageX)
     }
 
     render(){
         return(
             
-            <div>My name is {this.state.name} I'm from {this.state.address}
-            <button onClick={ this.handleClick}>Cick me</button>
+            <div>My name is {this.state.name} I'm from {this.state.age}
+            <button onMouseOver = {this.handleOnMoverOver}>Hover Me</button>
+            <button onClick={(event) =>{this.handleClick(event)} }>Cick me</button>
             </div>
             
         );
